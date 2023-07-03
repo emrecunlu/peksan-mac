@@ -40,7 +40,7 @@ const UretButton = () => {
 			sipNo: null,
 		}).then((response) => {
 			ProductionHelper.successProduction(workOrder);
-			window.electron.ipcRenderer.send('print-label', response.data);
+			window.electron.ipcRenderer.send('print-label', response.data.data);
 		});
 	};
 
